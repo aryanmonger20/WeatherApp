@@ -1,68 +1,122 @@
+# Weather App 🌞
+
+
+#### [![](https://img.shields.io/badge/REACT%20%20WEB%20APP%20PROJECT-WeatherApp-ffa100?style=for-the-badge&logo=REACT)](https://github.com/aryanmonger20/WeatherApp)
+
+__________________________________________
+
+An App which levergees the openweathermap API to deliver the most recent current weather in your city based on your country.
+
+## How it works
+
+The interface of this app is pretty straightforward and self-explenatory. All you have to do is, starting the app and filling out the needed Data
+
+<p align="center">
+ <img src="public/assets/readme/screen1.png" alt="ui_start"/>
+</p>
+
+1) Enter your City
+2) Enter your Country
+3) Hit the **Get Weather** button
+
+That's it!
+
+What you are getting afterwards is the current weather with an additonal beautiful icon which explains the current weather situation visually.
+
+<p align="center">
+ <img src="public/assets/readme/screen2.png" alt="ui_start_result"/>
+</p>
+
+## Work on the project locally
+
+In order to work and run the project locally you need NodeJs and npm installed on your system.
+Perform the following steps:
+
+```
+ $ git clone https://github.com/aryanmonger20/WeatherApp.git
+
+ $ cd WeatherApp
+
+ $ npm install
+
+ $ npm start
+```
+
+After running this commands, open up your favorite browser (if it doesn't open automatically which usually will happen) and go to [http://localhost:3000](http://localhost:3000).
+
+
+
+# Git Workflow for Contribution
+
+## Fork first 🍴
+
+We use the fork approach for collaboration. Fork the repository first and sync it with the original repository.
+
+### Steps to keep the local version up-to-date 🔄
+
+#### Inital setup 🛫
+
+- Clone your forked version
+  `git clone <UrlToTheForKedVersion>`
+
+- Update the remote Url in order to sync your fork with the original repo
+  `git remote add upstream https://github.com/aryanmonger20/WeatherApp.git`
+  or by using ssh
+  `git remote add upstream git@github.com:aryanmonger20/WeatherApp.git`
+- Verify that all urls are in place
+  `git remote -v`
+  this should give you a output like this
+  ```
+    origin  https://github.com/username/master-the-event-loop.git (fetch)
+    origin  https://github.com/username/master-the-event-loop.git (push)
+    upstream https://github.com/aryanmonger20/WeatherApp.git (fetch)
+    upstream https://github.com/aryanmonger20/WeatherApp.git (push)
+  ```
+
+#### Keep the local repository up-to-date & change into a different branch like `dev` branch 🔄
+
+Before starting to work on the files
+
+- Get the latest version of the dev branch
+  `git pull upstream dev`
+- Get the latest version of the master branch
+  `git pull upstream master`
+- Make sure that you made your changes always in the dev branch.
+- Check in which branch you currently are
+  `git branch`
+  Then you will see something like this:
+
+  ```
+  * dev
+  master
+  ```
+- If you are not in the dev branch switch to the dev branch
+  `git checkout dev`
+- Start hacking 💻
+
+#### Keep the remote repository (forked version) up-to-date 🔄
+
+- Get the latest version of the dev branch
+  `git pull upstream dev`
+- Get the latest version of the master branch
+  `git pull upstream master`
+- Push the new files to your forked version
+  `git push origin dev`
+
+## Creating PRs 🆕
+
+In order to tell us which changes you want to make in our project, push your changes to your fork to the for example **dev branch** and create a pull request to the original repository. This makes sure that we always have a working and stable master branch after we tested your changes.
+If we made our tests and the **dev branch** is stable, we will merge the **dev branch** into the master branch without closing the **dev branch**.
+
+In order to make a PR on Github, follow this steps:
+
+- Add your files for staging with
+  `git add .` for adding all files or
+  `git add <path/to/filename>` for adding specific files
+- Commit your changes
+  `git commit -m "commit message"`
+- Push your changes to the forked version
+  `git push origin dev`
+- Move over to your github page and click on "Make pull request"
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
