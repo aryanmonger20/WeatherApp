@@ -89,19 +89,28 @@ class App extends React.Component {
 
       const response = await api_call.json();
 
-      this.setState({
-        city: `${response.name}, ${response.sys.country}`,
-        country: response.sys.country,
-        main: response.weather[0].main,
-        celsius: this.calCelsius(response.main.temp),
-        temp_max: this.calCelsius2(response.main.temp_max),
-        temp_min: this.calCelsius2(response.main.temp_min),
-        description: response.weather[0].description,
-        error: false
-      });
+      if(response.cod !== "404"){
+        console.log(response);
+        this.setState({
+          city: `${response.name}, ${response.sys.country}`,
+          country: response.sys.country,
+          main: response.weather[0].main,
+          celsius: this.calCelsius(response.main.temp),
+          temp_max: this.calCelsius2(response.main.temp_max),
+          temp_min: this.calCelsius2(response.main.temp_min),
+          description: response.weather[0].description,
+          error: false
+        });
+        
+      }else{
+        this.setState({
+          error: true
+        });
 
-      // seting icons
-      this.get_WeatherIcon(this.weatherIcon, response.weather[0].id);
+
+      }
+
+      
 
       console.log(response);
     } else {
