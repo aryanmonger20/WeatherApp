@@ -5,7 +5,7 @@
 
 __________________________________________
 
-An App which levergees the openweathermap API to deliver the most recent current weather in your city based on your country.
+An App which leverges the openweathermap API to deliver the most recent current weather in your city based on your country.
 
 ## How it works
 
