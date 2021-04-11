@@ -123,6 +123,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <div className="head">
+        <i className="wi wi-day-lightning"></i> My Weather App</div>
         <Form loadweather={this.getWeather} error={this.state.error} />
         <Weather
           cityname={this.state.city}
